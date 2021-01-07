@@ -1,0 +1,51 @@
+﻿<Window x:Class="Annotation_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:chart="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:Annotation_Sample"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid x:Name="grid">
+        <Grid.DataContext>
+            <local:ViewModel/>
+        </Grid.DataContext>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+
+        <chart:SfChart x:Name="chart">
+            <chart:SfChart.PrimaryAxis>
+                <chart:NumericalAxis x:Name="xAxis"/>
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis x:Name="yAxis" />
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:ColumnSeries 
+                ItemsSource="{Binding Collection}" 
+                XBindingPath="XValue" 
+                YBindingPath="YValue"/>
+            <chart:SfChart.Annotations>
+                <!--Text of rectangle annotation has been updated from TextBox-->
+                <chart:RectangleAnnotation  
+                    x:Name="annotation"
+                    HorizontalTextAlignment="Stretch"
+                    VerticalTextAlignment="Stretch"
+                    X1="2.5"
+                    Text="{Binding Source={x:Reference txtBlock},Path=Text}"
+                    Y1="22"
+                    ClipToBounds="True"/>
+            </chart:SfChart.Annotations>
+        </chart:SfChart>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock Text="Change the annotation text" Margin="0,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!--TextChanged event hook for updating its annotation X2,Y2 on every text changes-->
+            <TextBox x:Name="txtBlock" TextChanged="txtBlock_TextChanged" />
+        </StackPanel>
+    </Grid>
+</Window>
