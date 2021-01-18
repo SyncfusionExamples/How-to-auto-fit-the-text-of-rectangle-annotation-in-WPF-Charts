@@ -1,5 +1,9 @@
 # How-to-auto-fit-the-text-of-rectangle-annotation-in-WPF-Charts
-This article explains how to auto resize [rectangle annotation](https://help.syncfusion.com/wpf/charts/annotations#rectangle-annotation) text in [WPF Chart](https://help.syncfusion.com/wpf/charts/getting-started). Consider the use case to dynamically change the annotation text and desired to adjust annotation based on dynamically applied text as per in below
+This article explains how to auto resize [rectangle annotation](https://help.syncfusion.com/wpf/charts/annotations#rectangle-annotation) text in [WPF Chart](https://help.syncfusion.com/wpf/charts/getting-started). 
+
+For more reference, please refer this KB [link](https://www.syncfusion.com/kb/12283/how-to-fit-the-rectangle-text-annotation-in-wpf-charts)
+
+Consider the use case to dynamically change the annotation text and desired to adjust annotation based on dynamically applied text as per in below
 
  ![](output.gif)
 
