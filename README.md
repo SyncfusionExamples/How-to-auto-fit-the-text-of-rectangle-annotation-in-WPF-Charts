@@ -1,15 +1,15 @@
-# How-to-auto-fit-the-text-of-rectangle-annotation-in-WPF-Charts
-This article explains how to auto resize [rectangle annotation](https://help.syncfusion.com/wpf/charts/annotations#rectangle-annotation) text in [WPF Chart](https://help.syncfusion.com/wpf/charts/getting-started). 
+# How to auto fit the text of rectangle annotation in WPF Charts
+This article explains how to auto resize [rectangle annotation](https://help.syncfusion.com/wpf/charts/annotations#rectangle-annotation) text in [WPF Chart](https://www.syncfusion.com/wpf-controls/charts).
 
 For more reference, please refer this KB [link](https://www.syncfusion.com/kb/12283/?utm_medium=listing&utm_source=github-examples) 
 
 Consider the use case to dynamically change the annotation text and desired to adjust annotation based on dynamically applied text as per in below
 
- ![](output.gif)
+ ![WPF Chart Auto fit the text](output.gif)
 
 This has been achieved by changing the adjusted values X2 and Y2 values of annotation based on the measured applied text from TextBox to annotation as per in below code snippet
 
-[XAML]
+XAML
 
 ```
   <Grid x:Name="grid">
