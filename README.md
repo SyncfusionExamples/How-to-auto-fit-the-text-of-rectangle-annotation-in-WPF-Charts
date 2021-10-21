@@ -96,6 +96,8 @@ private Size MeasuringString(string text)
         }
 ```
 
+KB article - [How-to-auto-fit-the-text-of-rectangle-annotation-in-WPF-Charts](https://www.syncfusion.com/kb/12283/how-to-fit-the-rectangle-text-annotation-in-wpf-charts)
+
 # See also
 
 [How to position the annotation based on pixel in WPF Chart](https://help.syncfusion.com/wpf/charts/annotations#positioning-the-annotation)
